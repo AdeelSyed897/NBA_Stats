@@ -20,7 +20,7 @@ print('\n')
 name = input('What Player: ')
 print('\n\n')
 
-driver.find_element(By.XPATH,'//*[@id="home"]/div[3]/div[2]/div/ask-bar/form/div/div[1]/textarea').send_keys(name + " regular season stats") #can be home/away to compare those stats
+driver.find_element(By.XPATH,'//*[@id="home"]/div[3]/div[2]/div/ask-bar/form/div/div[1]/textarea').send_keys(name + " 2022-2023 regular season home stats") #can be home/away to compare those stats
 driver.find_element(By.XPATH,'//*[@id="home"]/div[3]/div[2]/div/ask-bar/form/div/div[1]/input').click()
 page = driver.page_source
 soup = BeautifulSoup(page, 'html.parser')
@@ -43,7 +43,7 @@ for stat in stats:
 
 driver.find_element(By.XPATH,'/html/body/div[2]/div[1]/a').click()
 
-driver.find_element(By.XPATH,'//*[@id="home"]/div[3]/div[2]/div/ask-bar/form/div/div[1]/textarea').send_keys(name + " post season stats") #can be home/away to compare those stats
+driver.find_element(By.XPATH,'//*[@id="home"]/div[3]/div[2]/div/ask-bar/form/div/div[1]/textarea').send_keys(name + " 2022-2023 regular season away stats") #can be home/away to compare those stats
 driver.find_element(By.XPATH,'//*[@id="home"]/div[3]/div[2]/div/ask-bar/form/div/div[1]/input').click()
 page = driver.page_source
 soup = BeautifulSoup(page, 'html.parser')
